@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Assignment4_ASP.NET_MVC.Models.Products>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h2>Product List As On : @DateTime.Now.ToString()</h2>
+        @{ 
+            foreach (var item in Model)
+            {
+                <h3>Product Id : @item.ProductId</h3>
+                <h3>Product Name : @item.ProductName</h3>
+                <h3>Product Price : @item.Price</h3>
+                <hr />
+            }
+        }
+    </div>
+</body>
+</html>

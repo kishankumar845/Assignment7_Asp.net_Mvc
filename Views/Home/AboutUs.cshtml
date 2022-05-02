@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AboutUs</title>
+</head>
+<body>
+    <div>
+        <h1>We plead you to Know About Us!!</h1>
+        <hr />
+        <h1>This view was rendered at: @DateTime.Now.ToString()</h1>
+        <hr />
+        @{
+            for (int i = 1; i <= 5; i++)
+            {
+                <h2>Iteration: @i, Current Date and Time is: @DateTime.Now.ToString()</h2>
+            }
+        }
+    </div>
+    <div>
+        @Html.Partial("MenuWidget")
+
+    </div>
+</body>
+</html>
